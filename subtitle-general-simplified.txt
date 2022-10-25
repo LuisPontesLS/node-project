@@ -1,0 +1,44 @@
+0 PASTAS E ARQUIVOS
+.1 Pasta base (cd../cd nome; mkdir);
+.2 Arquivo json (npm init)
+.3 Instalações (express, uuid, nodemon (dev))
+    .3.1 Comando de desenvolvimento Nodemon no package.json.
+           Atenção a adicionar o nome do arquivo .js caso seja diferente de "index"
+.4 Arquivo JS 
+.5 Arquivo txt de anotações
+=======================================================================
+ARQUIVO.JS
+1 
+.1 Importações (express, uuid)
+    .1 Simplificações das bibliotecas
+    .1.1 Especificação de comunic json - app.use(express.json())
+.2 Porta
+.3 Lista de usuários/produtos
+=======================================================================
+2 AUDIÇÃO DA PORTA 
+Usa console.log como resposta e o função não precisa de argumentos 
+request e response.
+=======================================================================
+3 POST - no array.push() coloca a nova var dentro das aspas
+-----------------------------------------------------------------------
+4 GET, todos - Usa return json. Não precisa por no retorno o status e nº
+.......................................................................
+4.1 GET, id - Usa o 'id' na URL para (apenas) visualizar um indivíduo. 
+return json. Não precisa por no retorno o status e nº
+DIFERENÇAS AO GET GERAL: Rota base precisa de 'id dinâmico', '/:id';
+Cuidado ao colocar o request do 'id', é do tipo params (request.params)
+-----------------------------------------------------------------------
+5 PUT/PATCH - Na prática, ele reconstruirá um novo usuário e "jogara em cima"
+.1 Rota base precisa de "continuidade coringa" através do sinal de "/:id"
+.2 O 'id' request.params, pois não será alterado, deve ser apenas "capturado"  
+.3 As informações do body serão todas pegas
+.4 Remonta o objeto (com o id apenas mencionado (sem v4())
+
+.5 Buscar o 'id' "capturado" e cria uma var que será o index da posição do
+array, caso o encontre.
+AVISO: Cuidado com o item recebendo, deve ser com '=>' e não apenas '='
+
+.6 Resposta de erro caso não encontre json({message: "ERROR 404 - User not found"})
+.7 "Chama" a lista gera, a posição em forma de var
+.8 Responde ao front com status e json com o objeto atualizado.
+-----------------------------------------------------------------------
